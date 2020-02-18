@@ -7,7 +7,7 @@ function in_array(needle, haystack) {
                 return true;
             }
         }
-    } else if (typeof needle === 'object') {
+    } else if (Array.isArray(needle)) {
         for (let i in needle) {
             for (let j in haystack) {
                 if (needle[i] === haystack[j]) {
@@ -33,7 +33,7 @@ Array.prototype.in_array = String.prototype.in_array = function(needle) {
                 return true;
             }
         }
-    } else if (typeof needle === 'object') {
+    } else if (Array.isArray(needle)) {
         for (let i in needle) {
             for (let j in haystack) {
                 if (needle[i] === haystack[j]) {
